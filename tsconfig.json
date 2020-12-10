@@ -1,0 +1,16 @@
+{
+	"compilerOptions": {
+		"target": "ESNext",
+		"module": "ESNext",
+		"removeComments": true,
+		"preserveConstEnums": true,
+		"outDir": "./dist/",
+		"sourceMap": false,
+		//"inlineSourceMap": true,
+		"declarationMap": false,
+		"declaration": false,
+		"strict": true
+	},
+	"compileOnSave": true,
+	"include": ["src/**/*"]
+}

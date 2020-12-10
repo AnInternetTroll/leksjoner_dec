@@ -1,0 +1,14 @@
+{
+	"name": "leksjoner",
+	"version": "1.0.0",
+	"author": {
+		"name": "Luca Matei Pintilie",
+		"email": "lucamateip@viken.no"
+	},
+	"scripts": {
+		"build": "rm -r ./dist/ || true && tsc && chmod -R +x ./dist/*",
+		"postbuild": "for FILE in dist/*; do sed -i --posix 's/\\.ts\"/.mjs\"/g' \"$FILE\"; mv \"$FILE\" \"$(echo \"$FILE\" | sed --posix \"s/\\.js$/.mjs/g\")\" 2>/dev/null; done"
+	},
+	"license": "Unlicensed",
+	"main": "./src/main.ts"
+}
