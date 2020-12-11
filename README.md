@@ -1,6 +1,7 @@
 ## Info
 
 This code was written with typescript and deno in mind primarely.
+
 - `./src/` is where all the typescript source is.
 - `./dist/` is where all the simplified vanilla JavaScript ESNext code gets compiled to.
 
