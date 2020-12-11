@@ -68,20 +68,24 @@ function sortNumbers(array: number[] = [3, 2, 5], isAscending = false): void {
 			}
 		}
 
-		if (isAscending) {
-			for (let i = 0; i < array.length; i++) {
-				for (let item = 0; item < array.length; item++) {
-					let temp: number;
-					if (array[item] > array[item + 1]) {
-						temp = array[item + 1];
-						array[item + 1] = array[item];
-						array[item] = temp;
-					}
+		for (let i = 0; i < array.length; i++) {
+			for (let item = 0; item < array.length; item++) {
+				let temp: number;
+				if (array[item] > array[item + 1]) {
+					temp = array[item + 1];
+					array[item + 1] = array[item];
+					array[item] = temp;
 				}
 			}
+		}
+		if (isAscending) {
 			console.log(array);
 		} else {
-			console.log(array);
+			const reversed: number[] = [];
+			for (var i = 0; i < array.length; i++) {
+				reversed[i] = array[array.length - i - 1]
+			}
+			console.log(reversed);
 		}
 	} else {
 		throw new Error("Wrong type provided, please check your inputs");
@@ -94,7 +98,7 @@ if (import.meta.main) {
 	opp2([1, 2, "Geir", 5, "Luca"]);
 	printArray([1, 2, 3], true);
 	sortNumbers([9, 12, 5, 8, 0, 43, 23, 54], true);
-	sortNumbers([1, 6, 8, 4, 6, 4, 7, 9, 3, 4, 2, 99], true);
+	sortNumbers([1, 6, 8, 4, 6, 4, 7, 9, 3, 4, 2, 99], false);
 }
 export default {
 	opp1,
