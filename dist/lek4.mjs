@@ -15,9 +15,7 @@ export function logArray(array = dwarves) {
 			j++;
 		}
 		console.log(reversed);
-	} else {
-		console.log("THIS IS NOT AN ARRAY");
-	}
+	} else console.log("THIS IS NOT AN ARRAY");
 }
 if (import.meta.main) {
 	logArray(dwarves);

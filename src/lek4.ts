@@ -42,10 +42,9 @@ export function logArray(array: string[] = dwarves): void {
 			j++;
 		}
 		console.log(reversed);
-	} else {
-		// Mean response
-		console.log("THIS IS NOT AN ARRAY");
 	}
+	// Mean response
+	else console.log("THIS IS NOT AN ARRAY");
 }
 // @ts-ignore Deno feature and kind of node feature
 // See https://github.com/nodejs/modules/issues/274 for node

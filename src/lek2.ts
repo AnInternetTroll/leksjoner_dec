@@ -65,11 +65,8 @@ export function opp5b(): void {
  * @returns {void} The output is logged to the console
  */
 export function opp6(ice = true): void {
-	if (ice) {
-		console.log("Jippii");
-	} else {
-		console.log("Yuck!");
-	}
+	if (ice) console.log("Jippii");
+	else console.log("Yuck!");
 }
 /**
  * Check if `name1` is the same as `name2`
@@ -78,11 +75,8 @@ export function opp6(ice = true): void {
  * @returns {void} The output is logged to the console
  */
 export function opp7(name1 = "Jenny", name2 = "Johnny"): void {
-	if (name1 == name2) {
-		console.log(`[${name1}] and [${name2}] are the same`);
-	} else {
-		console.log(`[${name1}] and [${name2}] are not the same`);
-	}
+	if (name1 == name2) console.log(`[${name1}] and [${name2}] are the same`);
+	else console.log(`[${name1}] and [${name2}] are not the same`);
 }
 /**
  * Check if `name1`, `name2` and `name3` are the same
@@ -92,14 +86,14 @@ export function opp7(name1 = "Jenny", name2 = "Johnny"): void {
  * @returns {void} The output is logged to the console
  */
 export function opp8(name1 = "Betty", name2 = "Roger", name3 = "Jon"): void {
-	if (name1 === name2) {
+	if (name1 === name2)
 		if (name2 === name3) console.log("All 3 names are the same");
 		else console.log(`[${name1}] and [${name2}] are the same`);
-	} else if (name1 === name3) {
+	else if (name1 === name3)
 		console.log(`[${name1}] and [${name3}] are the same`);
-	} else if (name2 === name3) {
+	else if (name2 === name3)
 		console.log(`[${name2}] and [${name3}] are the same`);
-	} else console.log("No names are alike");
+	else console.log("No names are alike");
 }
 // @ts-ignore Deno feature and kind of node feature
 // See https://github.com/nodejs/modules/issues/274 for node
@@ -109,6 +103,7 @@ if (import.meta.main) {
 	opp6(false);
 	opp6(true);
 	opp7("Johnny", "Pappa");
+	opp8();
 }
 export default {
 	opp1,

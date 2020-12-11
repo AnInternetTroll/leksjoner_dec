@@ -37,13 +37,10 @@ function printArray(array = [1, "lul", true], isPrintBackwards = false) {
 }
 function sortNumbers(array = [3, 2, 5], isAscending = false) {
 	if (Array.isArray(array)) {
-		if (typeof isAscending != "boolean") {
-			isAscending = true;
-		}
+		if (typeof isAscending != "boolean") isAscending = true;
 		for (const i in array) {
-			if (typeof array[i] != "number") {
+			if (typeof array[i] != "number")
 				throw new Error("Wrong type provided, please check your inputs");
-			}
 		}
 		for (let i = 0; i < array.length; i++) {
 			for (let item = 0; item < array.length; item++) {
@@ -55,18 +52,14 @@ function sortNumbers(array = [3, 2, 5], isAscending = false) {
 				}
 			}
 		}
-		if (isAscending) {
-			console.log(array);
-		} else {
+		if (isAscending) console.log(array);
+		else {
 			const reversed = [];
-			for (let i = 0; i < array.length; i++) {
+			for (let i = 0; i < array.length; i++)
 				reversed[i] = array[array.length - i - 1];
-			}
 			console.log(reversed);
 		}
-	} else {
-		throw new Error("Wrong type provided, please check your inputs");
-	}
+	} else throw new Error("Wrong type provided, please check your inputs");
 }
 if (import.meta.main) {
 	opp1(50);

@@ -59,13 +59,10 @@ function printArray(array = [1, "lul", true], isPrintBackwards = false): void {
  */
 function sortNumbers(array: number[] = [3, 2, 5], isAscending = false): void {
 	if (Array.isArray(array)) {
-		if (typeof isAscending != "boolean") {
-			isAscending = true;
-		}
+		if (typeof isAscending != "boolean") isAscending = true;
 		for (const i in array) {
-			if (typeof array[i] != "number") {
+			if (typeof array[i] != "number")
 				throw new Error("Wrong type provided, please check your inputs");
-			}
 		}
 
 		for (let i = 0; i < array.length; i++) {
@@ -78,18 +75,14 @@ function sortNumbers(array: number[] = [3, 2, 5], isAscending = false): void {
 				}
 			}
 		}
-		if (isAscending) {
-			console.log(array);
-		} else {
+		if (isAscending) console.log(array);
+		else {
 			const reversed: number[] = [];
-			for (let i = 0; i < array.length; i++) {
+			for (let i = 0; i < array.length; i++)
 				reversed[i] = array[array.length - i - 1];
-			}
 			console.log(reversed);
 		}
-	} else {
-		throw new Error("Wrong type provided, please check your inputs");
-	}
+	} else throw new Error("Wrong type provided, please check your inputs");
 }
 // See https://github.com/nodejs/modules/issues/274 for node
 // @ts-ignore Deno feature and kind of node feature
