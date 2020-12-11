@@ -59,7 +59,7 @@ function sortNumbers(array = [3, 2, 5], isAscending = false) {
 			console.log(array);
 		} else {
 			const reversed = [];
-			for (var i = 0; i < array.length; i++) {
+			for (let i = 0; i < array.length; i++) {
 				reversed[i] = array[array.length - i - 1];
 			}
 			console.log(reversed);

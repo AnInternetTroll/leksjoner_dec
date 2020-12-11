@@ -32,6 +32,22 @@ export function opp3(
 	console.log(`Expected: ${expected}, actual type ${typeof input}`);
 }
 /**
+ * Typechecking but worse
+ * @param {"string" | "number" | "boolean"} expected
+ * @param {string | number | boolean} input
+ * @returns {void} Logs the result to the console
+ */
+export function opp4(
+	expected: "string" | "number" | "boolean" = "string",
+	input: string | number | boolean = "Just a string",
+): void {
+	if (expected === typeof input) {
+		console.log("Typechecked correct");
+	} else {
+		console.log("Typecheck failed");
+	}
+}
+/**
  * Adds x with y
  * @param {number} x
  * @param {number} y
@@ -191,6 +207,7 @@ export default {
 	opp1,
 	opp2,
 	opp3,
+	opp4,
 	opp5,
 	opp6: opp6,
 	opp7: opp7,

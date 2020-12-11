@@ -8,6 +8,13 @@ export function opp2(arg = "It's just a string silly") {
 export function opp3(expected = "string", input = "Just a string") {
 	console.log(`Expected: ${expected}, actual type ${typeof input}`);
 }
+export function opp4(expected = "string", input = "Just a string") {
+	if (expected === typeof input) {
+		console.log("Typechecked correct");
+	} else {
+		console.log("Typecheck failed");
+	}
+}
 export function opp5(num1 = 2, num2 = 2) {
 	if (typeof num1 === "number" && typeof num2 === "number") {
 		return num1 + num2;
@@ -109,6 +116,7 @@ export default {
 	opp1,
 	opp2,
 	opp3,
+	opp4,
 	opp5,
 	opp6: opp6,
 	opp7: opp7,
